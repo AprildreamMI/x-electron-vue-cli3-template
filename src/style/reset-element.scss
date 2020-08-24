@@ -1,0 +1,76 @@
+/**
+* 修改一些element-ui组件样式
+*/
+// 自定义的只要下边框的输入框
+.my-el-input-only-bottom-border {
+  // 只有下边线的输入框
+  .el-input__inner {
+    border-width: 0 0 1px 0;
+    border-radius: 0;
+  }
+  // 标题样式的输入框
+  &.title-input {
+    .el-input__inner {
+      height: 60px;
+      line-height: 60px;
+    }
+  }
+}
+
+// 输入框后的尾部
+.my-el-input__inner-group__append {
+  // 蓝色背景 白色字
+  &.append_bg_bule_color_white {
+    .el-input-group__append {
+      background-color: $color-primary;
+      color: $color-white;
+      border: 1px solid $color-primary;
+    }
+  }
+  // 蓝浅色背景 蓝色的字
+  &.append_primary_plain {
+    .el-input-group__append {
+      background-color: $--color-primary-light-9;
+      color: $color-primary;
+      border: 1px solid $--color-primary-light-6;
+      .el-button.el-button--small.is-disabled.is-plain {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+// form size = "small" 的 form-item 的下边距原先为18px
+// .el-form-item--small.el-form-item {
+//   margin-bottom: 22px;
+// }
+
+// 此类直接写在<el-menu> 上
+.my-el-menu-no-border {
+  &.el-menu {
+    border-right: 0px;
+  }
+}
+
+// 让el-tab-pane有高 在里面出滚动条 写在<el-tabs>上
+.my-el-tabs {
+  &.tabs_height_100 {
+    height: 100%;
+    .el-tabs__content {
+      height: calc(100% - 54px);
+      .el-tab-pane {
+        position: relative;
+        height: 100%;
+        // 为了能有个固宽给到el-table，从而使其能伸缩
+        .tab_pane_content {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+

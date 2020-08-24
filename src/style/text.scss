@@ -1,0 +1,189 @@
+[class*="text_size"] {
+  font-weight: 500;
+  font-family: "PingFang SC";
+}
+
+.text_weight {
+  &_bold {
+    font-weight: bold;
+  }
+}
+
+// 字体及样式和大小
+.text_size {
+  &_12 {
+    font-size: 12px;
+  }
+  &_14 {
+    font-size: 14px;
+  }
+  &_15 {
+    font-size: 15px;
+  }
+  &_16 {
+    font-size: 16px;
+  }
+  &_18 {
+    font-size: 18px;
+  }
+  &_20 {
+    font-size: 20px;
+  }
+  &_24 {
+    font-size: 24px;
+  }
+  &_26 {
+    font-size: 26px;
+  }
+  &_30 {
+    font-size: 30px;
+  }
+  &_32 {
+    font-size: 32px;
+  }
+  &_34 {
+    font-size: 34px;
+  }
+  &_36 {
+    font-size: 36px;
+  }
+  &_40 {
+    font-size: 40px;
+  }
+  &_46 {
+    font-size: 46px;
+  }
+  &_60 {
+    font-size: 60px;
+  }
+}
+
+// 文字行高
+.text_line_height {
+  &_20 {
+    line-height: 20px;
+  }
+  &_30 {
+    line-height: 30px;
+  }
+  &_32 {
+    line-height: 32px;
+  }
+  &_40 {
+    line-height: 40px;
+  }
+  &_50 {
+    line-height: 50px;
+  }
+  &_60 {
+    line-height: 60px;
+  }
+  &_64 {
+    line-height: 64px;
+  }
+}
+
+// 文字颜色
+.text_color {
+  // 主黑色 用于中大标题
+  &_primary {
+    color: $color-text-primary;
+  }
+  // 常规色 列如表单的lable 段落内容文字
+  &_regular {
+    color: $color-text-regular;
+  }
+  // 辅助文字
+  &_secondary {
+    color: $color-text-secondary;
+  }
+  // 占位文字
+  &_placeholder {
+    color: $color-text-placeholder;
+  }
+  // 白色
+  &_white {
+    color: $color-white;
+  }
+  // 黑色
+  &_black {
+    color: $color-black;
+  }
+  // 主色
+  &_active {
+    color: $color-primary;
+  }
+  // 警告色
+  &_warning {
+    color: $warning-color;
+  }
+  // 成功色
+  &_success {
+    color: $success-color;
+  }
+  // 危险色
+  &_danger {
+    color: $danger-color;
+  }
+  // 信息提示色
+  &_info {
+    color: $info-color;
+  }
+}
+
+// 行内元素左右
+.text_align {
+  &_left {
+    text-align: left;
+  }
+  &_center {
+    text-align: center;
+  }
+  &_right {
+    text-align: right;
+  }
+}
+
+// 文字截断
+.text_elip {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+// 多行的话就要加上此类
+.elip_multiple {
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.text_elip_line_2 {
+  -webkit-line-clamp: 2
+}
+.text_elip_line_3 {
+  -webkit-line-clamp: 3
+}
+
+// 把主色高亮
+.color_active_light {
+  color: $color-primary;
+  cursor: pointer;
+  &:hover {
+    color: $--color-primary-light-2;
+  }
+}
+
+// 激活成主色
+.color_active_primary {
+  cursor: pointer;
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+// 激活成主黑色
+.color_active_black {
+  cursor: pointer;
+  &:hover {
+    color: $color-text-primary;
+  }
+}

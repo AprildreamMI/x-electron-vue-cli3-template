@@ -1,0 +1,62 @@
+@import './reset.scss';
+@import './motion.scss';
+@import './space.scss';
+@import './text.scss';
+@import './element-variables.scss';
+@import './reset-element.scss';
+@import './tailwind.scss';
+
+
+// 手形
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// 清除浮动
+.clearfix {
+  &:after,
+  &:before {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// 左浮动 右浮动
+.pull {
+  &_left {
+    float: left;
+  }
+  &_right {
+    float: right;
+  }
+}
+
+// 星星 此类加在 el-form-item 上
+.asterisk {
+  .el-form-item__label{
+    position: relative;
+    &::before {
+      content: "*";
+      position: absolute;
+      left: -14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $danger-color;
+    }
+  }
+}
+
+// overflow
+.overflow {
+  &_hidden {
+    overflow: hidden;
+  }
+  &_auto {
+    overflow: auto
+  }
+}
+
+
