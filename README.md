@@ -3,11 +3,9 @@
 ***重要重要：使用前通过cmd执行如下命令***
 
 > // 配置electron镜像地址
-> npm config set 
-> ELECTRON_MIRROR=https://npm.taobao.org/mirrors/electron/
+> npm config set ELECTRON_MIRROR=https://npm.taobao.org/mirrors/electron/
 > // 打包时的各种文件的下载
 > electron-builder-binaries_mirror=https://npm.taobao.org/mirrors/electron-builder-binaries/
->
 > // 配置SASS镜像地址
 > npm config set sass_binary_site https://npm.taobao.org/mirrors/node-sass/
 
