@@ -105,6 +105,42 @@
 > https://nklayman.github.io/vue-cli-plugin-electron-builder/guide/#installation
 
 ```javascript
-vue add electron-builder
+  vue add electron-builder
+
+  // 如果需要注入Node环境，在background.js中配置不生效，需要在vue.config.js中配置
+  pluginOptions: {
+    electronBuilder: {
+      nodeIntegration: true
+    }
+  }
+
+  // 使用
+  Vue.prototype.$electron = require('electron')
+
 ```
+
+### 静态资源使用
+
++ 例子：设置图标
+
+  ```javascript
+  'use strict'
+  // '__static' is not defined
+  /* global __static */
+  
+  import { app, protocol, BrowserWindow } from 'electron'
+  ....
+  function createWindow() {
+    // Create the browser window.
+    win = new BrowserWindow({
+      width: 800,
+      height: 600,
+      // 引用的是public目录下的文件
+      icon: path.join(__static, 'icon.png')
+    })
+  }
+  ....
+  ```
+
+  
 
