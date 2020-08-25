@@ -7,6 +7,9 @@ import './plugins/element-ui'
 
 Vue.config.productionTip = false
 
+// electron 插件
+Vue.prototype.$electron = require('electron')
+
 new Vue({
   router,
   store,

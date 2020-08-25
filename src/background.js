@@ -1,4 +1,4 @@
-'use strict'
+// 'use strict'
 
 import path from 'path'
 import { app, protocol, BrowserWindow, session } from 'electron'
